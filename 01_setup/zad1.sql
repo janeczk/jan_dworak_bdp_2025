@@ -1,1 +1,1 @@
----hello world
+create database firma;
