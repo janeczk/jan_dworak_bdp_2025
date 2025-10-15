@@ -1,6 +1,6 @@
-SELECT p.imie, p.nazwisko
+SELECT p.imie, p.nazwisko, s.kwota, pr.kwota AS premia
 FROM pracownicy p
 JOIN wynagrodzenie w USING (id_pracownika)
 JOIN pensja s USING (id_pensji)
 JOIN premia pr USING (id_premii)
-WHERE pr.kwota = 0 AND s.kwota > 2000;
+ORDER BY s.kwota DESC, pr.kwota DESC;

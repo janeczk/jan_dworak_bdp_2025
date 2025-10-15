@@ -1,5 +1,5 @@
-SELECT p.id_pracownika 
+SELECT p.imie, p.nazwisko, s.kwota
 FROM pracownicy p
 JOIN wynagrodzenie w USING (id_pracownika)
 JOIN pensja s USING (id_pensji)
-WHERE s.kwota > 1000;
+ORDER BY s.kwota;
