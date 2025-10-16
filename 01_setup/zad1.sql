@@ -1,1 +1,1 @@
-create database firma;
+create database firma; ---
