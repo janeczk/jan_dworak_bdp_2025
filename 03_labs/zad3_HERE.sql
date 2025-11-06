@@ -1,6 +1,3 @@
---3. Utwórz nową tabelę o nazwie ‘streets_reprojected’, która zawierać będzie dane z tabeli
---T2019_KAR_STREETS przetransformowane do układu współrzędnych DHDN.Berlin/Cassini.
-
 CREATE TABLE streets_reprojected AS
 SELECT 
     gid,
@@ -13,5 +10,5 @@ SELECT
     fr_speed_l,
     to_speed_l,
     dir_travel,
-    ST_Transform(geom, 3068) AS geom -- przelicza wszystkie współrzędne X, Y do innego układu – EPSG:3068.
+    ST_Transform(geom, 3068) AS geom  -- EPSG:3068 = DHDN.Berlin/Cassini
 FROM t2019_kar_streets;
